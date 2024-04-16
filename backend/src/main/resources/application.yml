@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    url: ${FILME_DATABASE_URL:jdbc:postgresql://localhost:5432/filme}
+    username: ${FILME_DATABASE_USERNAME:filme}
+    password: ${FILME_DATABASE_PASSWORD:filme}
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: ${FILME_DATABASE_SHOW_SQL:true}
+  flyway:
+    locations: classpath:/db/migration
